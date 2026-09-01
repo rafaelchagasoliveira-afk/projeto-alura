@@ -1,114 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <style>
-        header {
-            background-color: #183C63;
-            color: #FFFFFF;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-        }
-        main {
-            background-color: #ffffff;
-            color: #183C63; 
-            max-width: 800px;
-            margin: 0 auto;    
-            padding: 16px;           
-        }  
-        img {
-            width: 80px;
-            height: 80px;
-        }
-        /* Estilos para a seção de interações */
-        .post {
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .interacoes {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-        }
-        .btn-interacao {
-            background: none;
-            border: 1px solid #183C63;
-            padding: 6px 12px;
-            cursor: pointer;
-            border-radius: 4px;
-            color: #183C63;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        /* Estilo visual para quando o botão for desabilitado */
-        .btn-interacao:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            background-color: #f0f0f0;
-            border-color: #cccccc;
-            color: #888888;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>Meu blog tech</h1>
         <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
     </header>
     <main>
-        <img src="imagem-blog.png" alt="Ícone minimalista para blog de tecnologia e educação com fundo azul escuro. No centro, elementos em branco formam um círculo contendo um livro aberto integrado a uma engrenagem e um chapéu de formatura na base. Uma lâmpada estilizada com traços de circuitos eletrônicos acende no meio do design, simbolizando inovação e conhecimento">
-        
-        <!-- Post 1 -->
-        <article class="post">
-            <h2>Meu primeiro post</h2>
-            <p>Por: Rafael Chagas Oliveira</p>
-            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-            <div class="interacoes">
-                <button class="btn-interacao">❤️ <span class="contador">0</span></button>
-                <button class="btn-interacao">👎 <span class="contador">0</span></button>
+        <article>
+            <img src="imagem-blog.png"
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
+            <div>
+                <h2>Meu primeiro post</h2>
+                <p class="artigo-autor">Por: Rafael das Chagas de Oliveira</p>
+                <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de
+                    tecnologia.</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
             </div>
         </article>
+        <article>
+            <img src="csf.png"
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
+            <div>
+                <h2>A história da primeira webcam</h2>
+                <p class="artigo-autor">Por: Rafael das Chagas de Oliveira</p>
+                <p>Em 1991, pesquisadores da Universidade de Cambridge criaram a primeira webcam para não perderem tempo indo até a cozinha e encontrando a cafeteira vazia. Eles monitoravam o nível do café em tempo real nos seus monitores.</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+          <article>
+            <img src="computer.xs.jpg"
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
+            <div>
+                <h2>O primeiro computador não for a máquina de Turing?</h2>
+                <p class="artigo-autor">Por: Rafael das Chagas de Oliveira</p>
+                <p><p>
+    Apesar de Alan Turing ser conhecido como pai da computação, ele não criou o primeiro computador.
+    Entre os primeiros computadores, um deles foi chamado Colossus projetado por Tommy Flowers durante a
+    Segunda Guerra Mundial e também, praticamente na mesma época, o ENIAC foi projetado por J. Presper
+    Eckert e John Mauchly.
+    <br><br>Embora o Colossus tenha funcionado antes como um "herói de guerra" especializado, o ENIAC é
+    frequentemente chamado de "pai" por ser o primeiro programável de uso geral. E aí, qual você
+    consideraria como o primeiro computador?
+</p>
 
-        <!-- Post 2 -->
-        <article class="post">
-            <h2>Meu segundo post</h2>
-            <p>Por: Rafael Chagas Oliveira</p>
-            <p>Hoje aprendi a manipular elementos do HTML utilizando JavaScript! É incrível como podemos dar vida às páginas.</p>
-            <div class="interacoes">
-                <button class="btn-interacao">❤️ <span class="contador">0</span></button>
-                <button class="btn-interacao">👎 <span class="contador">0</span></button>
+<p class="artigo-fonte">Fonte: The National Museum of Computing</p>
+
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
             </div>
         </article>
     </main>
 
-    <script>
-        // Seleciona todos os botões de interação da página
-        const botoes = document.querySelectorAll(".btn-interacao");
-
-        botoes.forEach(function(botao) {
-            botao.addEventListener('click', function() {
-                // Encontra o span com o número do contador dentro do botão clicado
-                let textoContador = botao.querySelector(".contador");
-                let quantidadeAtual = parseInt(textoContador.textContent);
-                
-                // Incrementa o valor na tela
-                textoContador.textContent = quantidadeAtual + 1;
-                
-                // Encontra o bloco de interações deste post específico
-                let containerInteracoes = botao.closest(".interacoes");
-                let botoesDoPost = containerInteracoes.querySelectorAll(".btn-interacao");
-                
-                // Desabilita ambos os botões (Like e Dislike) para este post
-                botoesDoPost.forEach(btn => btn.disabled = true);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
+
 </html>
