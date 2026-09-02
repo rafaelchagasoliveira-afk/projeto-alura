@@ -15,3 +15,20 @@ botoes.forEach(function (botao) {
         }
     }
 });
+
+// Apenas a parte do tema escuro abaixo:
+
+const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
+
+if (btnTemaEscuro) { // Verifica se o botão realmente existe na página antes de ouvir o clique
+    btnTemaEscuro.addEventListener("click", mudaTema);
+}
+
+function mudaTema() {
+    const corpoPagina = document.body;
+    if (corpoPagina.classList.contains("tema-escuro")) {
+        corpoPagina.classList.remove("tema-escuro");
+    } else {
+        corpoPagina.classList.add("tema-escuro");
+    }
+}
