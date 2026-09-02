@@ -4,23 +4,26 @@ botoes.forEach(function (botao) {
     let curtiu = false;
     botao.addEventListener("click", botaoClicado);
     function botaoClicado() {
+        // Se o botão clicado for o do tema escuro, não faz nada aqui
+        if (botao.classList.contains("btn-tema-escuro")) return;
+
         console.log("fui clicado");
         let texto = botao.querySelector("span");
-        if (curtiu === false) {
-            texto.textContent++;
-            curtiu = true;
-        } else {
-            texto.textContent--;
-            curtiu = false;
+        if (texto) {
+            if (curtiu === false) {
+                texto.textContent++;
+                curtiu = true;
+            } else {
+                texto.textContent--;
+                curtiu = false;
+            }
         }
     }
 });
 
-// Apenas a parte do tema escuro abaixo:
-
 const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
 
-if (btnTemaEscuro) { // Verifica se o botão realmente existe na página antes de ouvir o clique
+if (btnTemaEscuro) {
     btnTemaEscuro.addEventListener("click", mudaTema);
 }
 
